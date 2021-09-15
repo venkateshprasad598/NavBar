@@ -30,14 +30,14 @@
 
 .close {
   background-color: rgb(49, 66, 143);
-  height: 0;
+  height: 0px;
   overflow: hidden;
   transition-property: height;
   transition-duration: 0.8s;
 }
 .open {
   transform: scaleY(1.08);
-  height: 8rem;
+  height: 10rem;
 }
 @media (min-width: 800px) {
   .container {
