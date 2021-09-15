@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState } from "react";
+import { FaBars } from "react-icons/fa";
 
 function App() {
   const [showNav, setShow] = useState(false);
@@ -9,12 +10,12 @@ function App() {
         <section className="header">
           <h1>NAV BAR</h1>
           <button onClick={() => setShow(!showNav)} className="button">
-            View
+            <FaBars />
           </button>
         </section>
 
-        <div className="navBar">
-          <ul className="close open">
+        <div className={showNav ? "close open" : "close"}>
+          <ul className="ok">
             <li className="lists">
               <a href="#" className="anchor">
                 Home

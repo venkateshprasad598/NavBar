@@ -13,20 +13,32 @@
 
 .anchor {
   text-decoration: none;
-  color: black;
+  color: white;
+}
+
+.ok {
+  list-style: none;
+}
+.lists {
+  background-color: rgb(49, 66, 143);
+  padding: 5px 10px;
+}
+.lists:hover {
+  background-color: rgb(128, 137, 175);
+  border-left: 1px solid rgb(241, 235, 235);
 }
 
 .close {
-  list-style: none;
   background-color: rgb(49, 66, 143);
-  padding: 5px 5px;
   height: 0;
+  overflow: hidden;
+  transition-property: height;
+  transition-duration: 0.8s;
 }
-
 .open {
-  height: 10rem;
+  transform: scaleY(1.08);
+  height: 8rem;
 }
-
 @media (min-width: 800px) {
   .container {
     display: flex;
@@ -37,8 +49,11 @@
   .button {
     display: none;
   }
-  .home {
+  .ok {
     display: flex;
+  }
+  .close {
+    height: auto !important;
   }
   .lists {
     margin-right: 1rem;
